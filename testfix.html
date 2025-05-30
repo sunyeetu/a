@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>?</title>
+</head>
+<body>
+  <button onclick="openCustomBlank()">open</button>
+
+  <script>
+    function openCustomBlank() {
+      const newWin = window.open("about:blank", "_blank");
+
+      const customHTML = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Google</title>
+        </head>
+        <body>
+          <!-- INSERT YOUR HTML CONTENT BELOW -->
+          <h1>Hello from about:blank!</h1>
+          <p>You can customize this content by editing the 'customHTML' string.</p>
+          <!-- END CUSTOM HTML -->
+        </body>
+        </html>
+      `;
+
+      newWin.document.write(customHTML);
+      newWin.document.close();
+    }
+  </script>
+</body>
+</html>
